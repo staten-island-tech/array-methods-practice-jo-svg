@@ -48,4 +48,15 @@ products.forEach(product => {
   }
 });
 console.log('Unique Categories:', categories);
-//creates a list of all the unique categories in the products array
+//creates a list of all the unique categories in the products array\
+//assignment 2 part 1
+
+const electronics = products.filter(product => product.category === 'Electronics');
+console.log('Electronics:', electronics);
+const expensiveProducts = products.filter(product => product.price > 300);
+console.log('Expensive Products:', expensiveProducts);
+const highlyRatedProducts = products.filter(product => product.rated === 4.5 || product.rated > 4.5);
+console.log('4.5 or higher rating: ', highlyRatedProducts)
+//assignment 2 part 2
+
+console.log('4.5 or higher rating: ', highlyRatedProducts.name)
