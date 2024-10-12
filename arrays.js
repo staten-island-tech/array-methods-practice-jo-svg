@@ -56,8 +56,13 @@ console.log('Electronics:', electronics);
 const expensiveProducts = products.filter(product => product.price > 300);
 console.log('Expensive Products:', expensiveProducts);
 const highlyRatedProducts = products.filter(product => product.rating >= 4.5);
-console.log('4.5 or higher rating:', highlyRatedProducts)
+console.log('4.5 or higher rating:', highlyRatedProducts);
 //assignment 2 part 2
 
-console.log('4.5 or higher rating: ', highlyRatedProducts.map(product => product.name))
+/* console.log('4.5 or higher rating: ', highlyRatedProducts.map(product => product.name)) */
 //.map() method in JavaScript creates a new array populated with the results of calling a provided function on every element in the original array.
+highlyRatedProducts.forEach(product => console.log(product.name));
+
+const AffordableElectronics = products.filter(product => product.price < 1000);
+AffordableElectronics.forEach(product => console.log(product))
+//part 3
